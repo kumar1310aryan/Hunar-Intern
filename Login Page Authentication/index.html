@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="loginFormContainer">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="loginUsername">User Name or Email</label>
+                    <input type="text" id="loginUsername" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="loginPassword">User Password</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit">LOGIN</button>
+                <div id="loginMessage"></div>
+                <div class="links">
+                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="facebook">Login with Facebook</button>
+                    <button type="button" class="twitter">Login with Twitter</button>
+                </div>
+                <div class="switch-form">
+                    <span>Need new account?</span>
+                    <button type="button" id="showSignup">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        <div class="form-container" id="signupFormContainer" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label for="signupUsername">User Name</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                </div>
+                <button type="submit">SIGN UP</button>
+                <div id="signupMessage"></div>
+                <div class="switch-form">
+                    <span>Already have an account?</span>
+                    <button type="button" id="showLogin">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
