@@ -8,7 +8,7 @@ document.getElementById('showLogin').addEventListener('click', function() {
     document.getElementById('signupFormContainer').style.display = 'none';
 });
 
-// Load users from localStorage
+
 const users = JSON.parse(localStorage.getItem('users')) || {};
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
