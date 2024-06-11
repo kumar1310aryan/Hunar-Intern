@@ -1,0 +1,884 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .login button {
+    background-color: #ff6600;
+    color: white;
+    border: 1px solid #ff6600;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* * header .login .signup{
+    background-color: white;
+    color: #ff6600;
+    border: 1px solid #ff6600;
+    padding: 10px 20px;
+    cursor: pointer;
+} */
+header .login .signup {
+    background-color: white;
+    color: #ff6600;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: inset 0 0 0 1px #ff6600; /* Inner border effect */
+}
+
+header .login .signup:hover {
+    background-color: #ff6600;
+    color: white;
+    box-shadow: none; /* Remove inner border */
+}
+
+header .login button:hover:not(.signup) {
+    background-color: white;
+    color: #ff6600;
+    box-shadow: inset 0 0 0 1px #ff6600; /* Add inner border */
+}
+
+
+/* header .login .signup{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+header .login .signup::before{
+            content: '';
+            position: absolute;
+            top: 3px; 
+            right: 3px;
+            bottom: 3px;
+            left: 3px;
+            border: 2px solid white; 
+            pointer-events: none; 
+} */
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+.book-image-container {
+    width: 40%;
+    max-width: 250px;
+    margin-right: 20px;
+    padding-left: 35px;
+}
+
+.book-image {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.book-image-container:hover .book-image {
+    transform: scale(1.1);
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Slider container */
+.slider {
+    width: 80%;
+    overflow:hidden;
+    position: relative;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Slide track */
+  .slide-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+  /* Navigation buttons */
+.slider-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Disable pointer events on the container */
+  }
+  
+  .nav-left,
+  .nav-right {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Enable pointer events on the buttons */
+  }
+  
+  .nav-left:hover,
+  .nav-right:hover {
+    background-color: #e65c00;
+  }
+
+
+/* Book List */
+.book-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.book-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.book-info {
+    padding: 10px;
+}
+
+.book-info .rating {
+    display: block;
+    color: #ff6600;
+    margin-bottom: 5px;
+}
+
+.book-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.book-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-info a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.book-item img {
+    width: 200px; /* Adjust this value as needed */
+    height: auto; /* Maintains the aspect ratio */
+    max-width: 100%; /* Ensures responsiveness */
+    transition: transform 0.3s ease; /* Optional: add a transform effect on the image */
+}
+
+.book-item img:hover {
+    transform: scale(1.05); /* Optional: slightly enlarge the image on hover */
+}
+
+.book-item:hover .book-info h3,
+.book-item:hover .book-info p,
+.book-item:hover .book-info .rating {
+    font-size: 1.2em; /* Increase the font size when the image is hovered */
+    transition: font-size 0.3s ease; /* Smooth transition for font size change */
+}
+
+/* Navigation */
+nav {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f00;
+}
+
+nav ul li a:focus {
+    outline: none;
+    color: #ff6f00;
+}
+
+nav ul li a:active {
+    color: #ff6200;
+}
+
+/* Additional styles */
+nav ul li {
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff6f00;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .book-image-container {
+        width: 80%;
+        margin-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-bar input, .search-bar select, .search-bar button {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .book-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-item {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+
+.contactHeader {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+.contactHeader h1 {
+    margin: 0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact-form, .contact-map {
+    width: 48%;
+}
+
+.contact-form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-top: 0;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact-info div {
+    width: 24%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header .login button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Other styles here */
+
+
+/* General styles */
+
+  
+  /* Slider container */
+  .slider {
+    width: 80%;
+    overflow:hidden;
+    position: relative;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* Slide track */
+  .slide-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Book items */
+  .book-item {
+    min-width: 30%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .book-item img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  .book-info {
+    padding: 10px;
+  }
+  
+  .book-info .rating {
+    display: block;
+    color: #ff6600;
+    margin-bottom: 5px;
+  }
+  
+  .book-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .book-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .book-info a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  /* Navigation buttons */
+  .slider-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none; /* Disable pointer events on the container */
+  }
+  
+  .nav-left,
+  .nav-right {
+    background-color: #ff6600;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    pointer-events: all; /* Enable pointer events on the buttons */
+  }
+  
+  .nav-left:hover,
+  .nav-right:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Hover effects */
+  .book-item:hover .book-info h3,
+  .book-item:hover .book-info p,
+  .book-item:hover .book-info .rating {
+    font-size: 1.2em;
+    transition: font-size 0.3s ease;
+  }
+  
+
+
+
+
+
+
+  /* about */
+  .about-us {
+    padding: 40px 20px;
+    /* max-width: 00px; */
+    margin: 0 auto;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.about-us p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.about-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-us ul li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 4px solid #ff6f00;
+}
+
+.about-us ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.about-us a {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+.about-us a:hover {
+    text-decoration: underline;
+}
+
+
+#about{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.content-section {
+    /* padding: 40px 20px; */
+    padding-top: 5px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #666;
+}
+
+.book-list, .author-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.book-card, .author-card {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-card img, .author-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: darkorange;
+}
+
+.quote {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #333;
+}
+
+blockquote {
+    font-style: italic;
+    color: #555;
+}
+
+.center{
+    text-align: center;
+    font-size: 28px;
+}
+
+
+.about-us {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.about-us h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    margin-top: 40px;
+    color: #ff6f00;
+    border-bottom: 2px solid #ff6f00;
+    padding-bottom: 10px;
+}
+
+.about-us p {
+    margin: 20px 0;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-us ul li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 20px;
+    border-left: 4px solid #ff6f00;
+    transition: background 0.3s ease;
+}
+
+.about-us ul li:hover {
+    background: #ffefdc;
+}
+
+.about-us a {
+    color: #ff6f00;
+    text-decoration: none;
+}
+
+.about-us a:hover {
+    text-decoration: underline;
+    color: #e65c00;
+}
+
+section.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 20px;
+}
+
+.contact form {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact form button {
+    background-color: #ff6f00;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #e65c00;
+}
+
+.contact .map {
+    flex: 1;
+}
+
+#about {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contactHeader{
+    text-align: center;
+}
+
+.author-card img {
+    width: 150px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensure the image covers the dimensions while maintaining its aspect ratio */
+    border-radius: 5px; /* Optional: Adds a slight rounding to the corners */
+}
